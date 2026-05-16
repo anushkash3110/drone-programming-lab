@@ -3,9 +3,25 @@ import time
 
 drone = Drone()
 drone.connect()
-
 drone.take_off()
-time.sleep(3)
+
+drone.move_down(20)
+time.sleep(2)
+drone.move_up(30)
+time.sleep(2)
+
+drone.move_left(20)
+time.sleep(2)
+drone.move_right(30)
+time.sleep(2)
+
+
+drone.move_forward(80)
+time.sleep(2)
+drone.move_backward(50)
+time.sleep(2)
+
+
 
 drone.land()
-time.sleep(3)
+time.sleep(1)
