@@ -1,0 +1,161 @@
+# Drone Programming Notes
+
+## Setup Done
+
+* Installed Python 3.11.9
+* Setup VS Code
+* Created virtual environment (.venv)
+* Installed:
+
+  * pysimverse
+  * opencv-python
+  * numpy
+  * pyzmq
+  * djitellopy
+* Connected Python with PySimverse
+
+---
+
+## Basic Drone Commands Learned
+
+### Connection
+
+```python
+from pysimverse import Drone
+
+drone = Drone()
+drone.connect()
+```
+
+---
+
+## Basic Flight
+
+### Takeoff
+
+```python
+drone.takeoff()
+```
+
+### Landing
+
+```python
+drone.land()
+```
+
+---
+
+## Movement Controls
+
+### Forward / Backward
+
+```python
+drone.move_forward()
+drone.move_backward()
+```
+
+### Left / Right
+
+```python
+drone.move_left()
+drone.move_right()
+```
+
+### Up / Down
+
+```python
+drone.move_up()
+drone.move_down()
+```
+
+### Rotation
+
+```python
+drone.rotate_clockwise()
+drone.rotate_counter_clockwise()
+```
+
+---
+
+## RC Continuous Control
+
+RC = Real-time continuous movement control
+
+Example:
+
+```python
+drone.send_rc_control(lr, fb, ud, yv)
+```
+
+Meaning:
+
+* lr → left/right
+* fb → forward/backward
+* ud → up/down
+* yv → yaw rotation
+
+Used for:
+
+* smooth movement
+* manual style control
+* keyboard control systems
+
+---
+
+# Important Concepts
+
+## Drone Coordinate Thinking
+
+Drone movement happens in:
+
+* X axis
+* Y axis
+* Z axis
+
+---
+
+## Yaw
+
+Yaw = drone rotation left/right
+
+---
+
+## Autonomous Logic Idea
+
+```python
+if obstacle:
+    move_left()
+else:
+    move_forward()
+```
+
+---
+
+# Current Progress
+
+✅ Environment setup
+✅ Simulator connection
+✅ Basic flight controls
+✅ RC control understanding
+
+---
+
+# Next Learning
+
+## Mission 1 → Garage Mission
+
+Focus:
+
+* navigation
+* movement precision
+* directional control
+* mission logic
+
+---
+
+# Personal Understanding
+
+* Software is equally important as hardware in drones
+* Simulators help learn safely
+* Python + OpenCV + drone logic = autonomous systems foundation
+* GitHub should track learning progress regularly
